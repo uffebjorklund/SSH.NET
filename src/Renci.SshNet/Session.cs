@@ -713,7 +713,7 @@ namespace Renci.SshNet
         public void Disconnect()
         {
             DiagnosticAbstraction.Log(string.Format("[{0}] Disconnecting session.", ToHex(SessionId)));
-
+            
             // send SSH_MSG_DISCONNECT message, clear socket read buffer and dispose it
             Disconnect(DisconnectReason.ByApplication, "Connection terminated by the client.");
 
@@ -1856,7 +1856,7 @@ namespace Renci.SshNet
                                 // this may result in a SocketException (eg. An existing connection was forcibly
                                 // closed by the remote host) which we'll log and ignore as it means the socket
                                 // was already shut down
-                                _socket.Shutdown(SocketShutdown.Send);
+                                _socket.Shutdown(SocketShutdown.Both);
                             }
                             catch (SocketException ex)
                             {
