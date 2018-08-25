@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <PackageId>SSH.NET.Fork</PackageId>
+    <PackageVersion>6.6.6</PackageVersion>
     <TargetFrameworks>netstandard1.3;netstandard2.0</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>Renci.SshNet</AssemblyName>
     <AssemblyOriginatorKeyFile>../Renci.SshNet.snk</AssemblyOriginatorKeyFile>
-    <LangVersion>5</LangVersion>
+    <LangVersion>Latest</LangVersion>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
